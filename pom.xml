@@ -72,11 +72,12 @@
 
 
   <dependencies>
-  	<dependency>
+  	<!-- <dependency>
   	  <groupId>org.soaplab</groupId>
   		<artifactId>soaplab</artifactId>
   		<version>2.1.2-beta01</version>
   	</dependency>
+  	-->
   
     <dependency>
       <groupId>junit</groupId>
