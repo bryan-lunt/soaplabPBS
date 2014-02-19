@@ -18,6 +18,15 @@
   </properties>
 
   <repositories>
+  <repository>
+      <id>central</id>
+      <name>Maven Repository Switchboard</name>
+      <layout>default</layout>
+      <url>http://repo1.maven.org/maven2</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
     <repository>
       <id>bio.maven.repository</id>
       <url>http://biomoby.org/m2repo/</url>
@@ -33,6 +42,7 @@
 </distributionManagement>
 
 <build>
+<pluginManagement>
     <plugins>
         <plugin>
             <groupId>com.github.github</groupId>
@@ -57,10 +67,6 @@
               </execution>
             </executions>
         </plugin>
-    </plugins>
-</build>
-
-<plugins>
     <plugin>
         <artifactId>maven-deploy-plugin</artifactId>
         <version>2.8.1</version>
@@ -68,7 +74,10 @@
             <altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
         </configuration>
     </plugin>
-</plugins>
+    </plugins>
+    </pluginManagement>
+</build>
+
 
   <dependencies>
   	<dependency>
