@@ -60,6 +60,7 @@
                 <noJekyll>true</noJekyll>                                  <!-- disable webpage processing -->
 		<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> <!-- matches distribution management repository url above -->
 		<branch>refs/heads/gh-pages</branch>                       <!-- remote branch name -->
+		<force>true</force>
 		<includes>
 			<include>**/*</include>
 		</includes>
