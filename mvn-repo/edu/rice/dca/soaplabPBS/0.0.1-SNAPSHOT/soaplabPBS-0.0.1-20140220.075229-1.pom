@@ -27,10 +27,6 @@
         <enabled>false</enabled>
       </snapshots>
     </repository>
-    <repository>
-      <id>bio.maven.repository</id>
-      <url>http://biomoby.org/m2repo/</url>
-  </repository>
   </repositories>
 
 <distributionManagement>
@@ -98,13 +94,11 @@
 
 
   <dependencies>
-	<!--    
 	  <dependency>
-  	  <groupId>org.soaplab</groupId>
-  		<artifactId>soaplab</artifactId>
+  	  	<groupId>org.soaplab</groupId>
+  		<artifactId>soaplab-core</artifactId>
   		<version>2.3.1</version>
   	</dependency>
-	-->
   
   </dependencies>
 </project>
