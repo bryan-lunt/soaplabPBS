@@ -52,7 +52,9 @@
                 <message>Maven artifacts for ${project.version}</message>  <!-- git commit message -->
                 <noJekyll>true</noJekyll>                                  <!-- disable webpage processing -->
                 <branch>refs/heads/gh-pages</branch>                       <!-- remote branch name -->
-                <includes><include>**/*</include></includes>
+		<includes>
+			<include>**/*</include>
+		</includes>
                 <repositoryName>soaplabPBS</repositoryName>      <!-- github repo name -->
                 <repositoryOwner>bryan-lunt</repositoryOwner>    <!-- github username  -->
             </configuration>
@@ -72,18 +74,13 @@
 
 
   <dependencies>
-  	<!-- <dependency>
+	<!--    
+	  <dependency>
   	  <groupId>org.soaplab</groupId>
   		<artifactId>soaplab</artifactId>
-  		<version>2.1.2-beta01</version>
+  		<version>2.3.1</version>
   	</dependency>
-  	-->
+	-->
   
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
   </dependencies>
 </project>
