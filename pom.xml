@@ -33,7 +33,6 @@
   </repository>
   </repositories>
 
- <!--
 <distributionManagement>
     <repository>
         <id>internal.repo</id>
@@ -41,7 +40,6 @@
         <url>file://${project.build.directory}/mvn-repo</url>
     </repository>
 </distributionManagement>
--->
 
 <build>
 <pluginManagement>
@@ -53,7 +51,8 @@
             <configuration>
                 <message>Maven artifacts for ${project.version}</message>  <!-- git commit message -->
                 <noJekyll>true</noJekyll>                                  <!-- disable webpage processing -->
-                <branch>refs/heads/gh-pages</branch>                       <!-- remote branch name -->
+		<outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> <!-- matches distribution management repository url above -->
+		<branch>refs/heads/gh-pages</branch>                       <!-- remote branch name -->
 		<includes>
 			<include>**/*</include>
 		</includes>
