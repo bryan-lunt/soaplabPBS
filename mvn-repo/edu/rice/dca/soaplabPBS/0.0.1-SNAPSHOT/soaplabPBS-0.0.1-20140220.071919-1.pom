@@ -37,7 +37,8 @@
     <repository>
         <id>internal.repo</id>
         <name>Temporary Staging Repository</name>
-	<url>file://${project.build.directory}/site/mvn-repo</url>
+	<!-- <url>file://${project.build.directory}/site/mvn-repo</url> -->
+	<url>http://bryan-lunt.github.io/soaplabPBS/mvn-repo/</url>
     </repository>
 </distributionManagement>
 
@@ -50,7 +51,15 @@
             <configuration>
 		    <altDeploymentRepository>internal.repo::default::file://${project.build.directory}/site/mvn-repo</altDeploymentRepository>
         </configuration>
-    </plugin>
+</plugin>
+	<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>3.3</version>
+        <configuration>
+		<locales>en,ja</locales>
+  </configuration>
+      </plugin>	
         <plugin>
             <groupId>com.github.github</groupId>
             <artifactId>site-maven-plugin</artifactId>
@@ -70,11 +79,18 @@
             <executions>
               <!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->
 	      <execution>
-                <phase>deploy</phase>
+                <phase>site-deploy</phase>
                 <goals>
 			<goal>site</goal>
                 </goals>
-              </execution>
+	</execution>
+	<execution>
+		<id>foobar</id>
+		<phase>deploy</phase>
+		<goals>
+			<goal>site</goal>
+		</goals>
+	</execution>
             </executions>
     </plugin>
     </plugins>
