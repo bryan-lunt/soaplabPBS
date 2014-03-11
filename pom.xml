@@ -34,6 +34,7 @@
         <id>internal.repo</id>
         <name>Temporary Staging Repository</name>
 	<!-- <url>file://${project.build.directory}/site/mvn-repo</url> -->
+	<!-- <url>https://raw.github.com/bryan-lunt/soaplabPBS/gh-pages/mvn-repo/</url>-->
 	<url>http://bryan-lunt.github.io/soaplabPBS/mvn-repo/</url>
     </repository>
 </distributionManagement>
